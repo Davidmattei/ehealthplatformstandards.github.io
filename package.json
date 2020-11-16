@@ -1,0 +1,12 @@
+{
+  "name": "ehealth-platform-standards",
+  "version": "1.0.0",
+  "scripts": {
+    "zip": "ems-zip-create --filename ems_fhir.zip --globs ** '!package.json'",
+    "publish": "ems-zip-publish standards_website:fhir --filename ems_fhir.zip --field zip_file",
+    "release": "npm run zip && npm run publish"
+  },
+  "dependencies": {
+    "@elasticms/publisher": "^1.0.0"
+  }
+}
